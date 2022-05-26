@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My Profile</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+   
+    <style type="text/css">
+        #HeaderDiv a.navbar-brand {
+            font-family: Gabriola;
+            font-size: 25px;
+            color: rgb(251, 126, 17);
+        }
+
+        #navbarCollapse li b {
+            color: rgb(238, 118, 13);
+        }
+
+        .fullscreen_bg {
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .fullscreen_bg_video {
+            position: absolute;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        #Home {
+            height: auto;
+            padding-bottom: 40px;
+            color: #4be5e5;
+            font-weight: bold
+        }
+
+        #HomeRow {
+            padding-top: 7%;
+        }
+
+        #HomeRow a i.fa {
+            color: #4be5e5;
+        }
+
+        #HomeRow div.col-lg-offset-3 {
+            background: rgba(0, 0, 0, 0.7);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px rgb(45, 205, 233);
+        }
+
+        #TechnicalSummary {
+            height: 100vh;
+            padding-bottom: 40px;
+            color: white;
+            background-attachment: fixed;
+            background-image: url('Images/123.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-top: 200PX;
+        }
+
+        #TechnicalSummaryRow {
+            padding-top: 7%;
+        }
+
+        #TechnicalSummary h1 {
+            font-family: Ink Free;
+        }
+
+        #Qualifications {
+            background-attachment: fixed;
+            background-image: url('Images/123.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            padding-bottom: 40px;
+            color: #000000;
+        }
+
+        #QualificationsRow {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #QualificationsRow div.col-lg-offset-1 {
+            padding: 10px;
+            background-color: rgba(29, 195, 232, 0.8);
+            border-radius: 8px;
+            box-shadow: 0px 0px 28px rgb(17, 227, 139);
+
+        }
+
+        #Qualifications table {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #Qualifications table tr td {
+            padding-bottom: 20px;
+        }
+
+        #Qualifications table tr td:first-child {
+            width: 30%;
+            padding-left: 10px;
+        }
+
+        #Skills {
+            background-attachment: fixed;
+            background-image: url('Images/Qualifications_Image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            padding-bottom: 40px;
+            color: #000000;
+        }
+
+        #SkillsRow {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #SkillsRow div.col-lg-offset-5 {
+            padding: 10px;
+            background-color: #e54141;
+            border-radius: 8px;
+            box-shadow: 0px 0px 28px rgb(234, 114, 10);
+            opacity: 0.8;
+        }
+
+        #Skills table {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #Skills table tr td {
+            padding-bottom: 20px;
+        }
+
+        #Skills table tr td:first-child {
+            width: 30%;
+            padding-left: 10px;
+        }
+
+        #Noncollegiate {
+            background-attachment: fixed;
+            background-image: url('Images/Qualifications_Image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            padding-bottom: 40px;
+            color: #000000;
+        }
+
+        #NoncollegiateRow {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #NoncollegiateRow div.col-lg-offset-1 {
+            padding: 10px;
+            background-color: #d52c2c;
+            border-radius: 8px;
+            box-shadow: 0px 0px 28px rgb(241, 131, 34);
+            opacity: 0.8;
+        }
+
+        #Noncollegiate table {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #Noncollegiate table tr td {
+            padding-bottom: 20px;
+        }
+
+        #Noncollegiate table tr td:first-child {
+            width: 30%;
+            padding-left: 10px;
+        }
+
+        #Experience {
+            background-attachment: fixed;
+            background-image: url('Images/Qualifications_Image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+            padding-bottom: 40px;
+            color: #000000;
+        }
+
+        #ExperienceRow {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #ExperienceRow div.col-lg-offset-5 {
+            padding: 10px;
+            background-color: #f31515;
+            border-radius: 8px;
+            box-shadow: 0px 0px 28px rgb(240, 116, 8);
+            opacity: 0.8;
+        }
+
+        #Experience table {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #Experience table tr td {
+            padding-bottom: 20px;
+        }
+
+        #Experience table tr td:first-child {
+            width: 30%;
+            padding-left: 10px;
+        }
+
+        #Portfolio {
+            height: auto;
+            padding-bottom: 40px;
+            color: rgb(233, 35, 35);
+            font-size: 20px;
+
+        }
+
+        #PortfolioRow h1 {
+            color: #000000;
+            font-family: Monotype Corsiva;
+        }
+
+        #Portfolio div.col-lg-3 {
+            margin-bottom: 20px;
+        }
+
+        .ContainerImage {
+            position: relative;
+            width: 100%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: 200px;
+            transition: 1s;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .ContainerImage:hover .overlay {
+            opacity: 1;
+        }
+
+        .ContainerImage:hover .image {
+            transform: skew(20deg);
+        }
+
+        .text {
+            color: #c5ef94;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #FreelancingRole {
+            height: auto;
+            color: rgb(225, 40, 40);
+            background-attachment: fixed;
+            background-image: url('Images/FreelancingRole_Image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+
+        }
+
+        #FreelancingRoleRow {
+            background: rgba(0, 0, 0, 0.8);
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
+        #FreelancingRoleRow div.col-lg-3 {
+            text-align: center;
+        }
+
+        #FreelancingRoleRow div.col-lg-3 i.fa {
+            color: Orange;
+        }
+
+        #FreelancingRole h1 {
+            font-family: Monotype Corsiva;
+        }
+
+        @media(max-width:768px) {
+            .fullscreen_bg_video {
+                left: -160%;
+                width: 260%;
+            }
+
+            #TechnicalSummary {
+                height: auto;
+            }
+        }
+
+        @media(max-width:992px) {
+            #HomeRow {
+                padding-top: 17%;
+            }
+
+            #TechnicalSummaryRow {
+                padding-top: 17%;
+            }
+        }
+
+        .navbar-brand {
+            background-color: #cae6c0;
+            color: rgb(40, 38, 38);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top" style="z-index:1000;">
+          
+            <marquee>
+                <div class="navbar-header" id="HeaderDiv">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Mitesh Borse</a>
+                </div>
+            </marquee>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" style="font-size:13px;padding-right:15px;">
+                    <li><a href="#Home"><b>Introduction</b></a></li>
+                    <li><a href="#TechnicalSummary"><b>Technical Knowledge</b></a></li>
+                    <li><a href="#Qualifications"><b>Education Qualifications</b></a></li>
+                    <li><a href="#Skills"><b>Skills</b></a></li>
+                    <li><a href="#Portfolio"><b>Hobbies</b></a></li>
+                    <li><a href="#FreelancingRole"><b>Contact Me</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="Home" class="fullscreen_bg">
+        <video src="" autoplay loop muted class="fullscreen_bg_video"></video>
+        <div class="row" id="HomeRow">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-lg-6 col-md-6 col-sm-8 col-xs-12  wow rollIn"
+                data-wow-duration="3s">
+                </background>
+                
+                <center>
+                    <h2>Mitesh Borse</h2>
+                </center>
+                <center>
+                    <h5>BCA STUDENT.</h5>
+                    <hr />
+                </center>
+                <div class="row">
+                    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-5 col-md-5 col-sm-5">
+                        <center><i class="fa fa-2x fa-phone"></i> +91- 9727000940</center>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-6">
+                        <center><i class="fa fa-2x fa-envelope"></i> <a href="mailto:abhishekvishwa7s5@gmail.com"
+                                style="color:#4be5e5;">borsemitesh0123@gmail.com</a></center>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10">
+                        <center><i class="fa fa-2x fa-map-marker"></i> 74, Kashibanagar hatkeshwar Ahmedabad -
+                            380008</center>
+                    </div>
+                </div>
+                <hr />
+                <center><a href="https://m.facebook.com/"><i class="fa fa-2x fa-facebook-square"></i></a> &nbsp;<a
+                        href="https://github.com/Miteshborse"><i class=" fa fa-2x fa-github-square"></i></a> &nbsp;<a
+                        href="https://silveroakuni.ac.in/"><i class="fa fa-2x fa-map-marker"></i></a> &nbsp;<a
+                        href="https://instagram.com/abhishek__7700?igshid=YmMyMTA2M2Y="><i
+                            class="fa fa-2x fa-instagram"></i></a></center>
+            </div>
+        </div>
+    </div><br><br><br>
+
+    <div id="TechnicalSummary" class="container-fluid wow bounceIn" data-wow-duration="3s">
+        <div class="row" id="TechnicalSummaryRow">
+            <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10">
+                <h1 class="text-center"><i class="fa fa-tachometer "></i> Technical Knowledge</h1>
+                <hr>
+                <ul>
+                    <li>HTML</li>
+                    <li>C</li>
+                    <li>CSS</li>
+                                            -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Qualifications" class="container-fluid">
+        <div class="row" id="QualificationsRow">
+            <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-6 col-md-6 col-sm-6 wow fadeIn"
+                data-wow-duration="4s">
+                <br />
+                <h2 class="text-center"><i class="fa fa-graduation-cap "></i> Education Qualification</h2>
+                <hr />
+                <table class="table table-responsive">
+                    <tr>
+                        <td>Year<br />2019</td>
+                        <td>SSC(10th) 61%,GSEB (2019)<br /> from Ahmedabad <br />Jay Somnath <br />
+                            (First Class with Distinction).</td>
+                    </tr>
+                    <tr>
+                        <td>Year<br />2021</td>
+                        <td> (12th) Commerce, 62.14%,GSEB (2021)<br /> from Ahmedabad <br />Kumkum Vidhyalay
+                             <br /> (With First Class).</td>
+                    </tr>
+                    <tr>
+                        <td>Year<br />Pursuing</td>
+                        <td>Bachelor of Computer Application <br />from Silver oak Univercity<br /></td>
+                    </tr>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="Skills" class="container-fluid">
+        <div class="row" id="SkillsRow">
+            <div class="col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-lg-6 col-md-6 col-sm-6 wow slideInRight"
+                data-wow-duration="3s">
+                <center><br />
+                    <h2><i class="fa fa-laptop"></i> Technical Skills</h2>
+                    <hr />
+                </center>
+                <table>
+                    <tr>
+                        <td>Programming Languages:</td>
+                        <td>ccc,MS office,tally,coral drawing</td>
+                    </tr>
+                    <tr>
+                        <td>Databases:</td>
+                        <td> Sql.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Portfolio" class="container-fluid wow bounceIn" data-wow-duration="3s">
+        <div class="row" id="PortfolioRow">
+            <center><br />
+                <h1> My Hobbies</h1>
+                <hr />
+            </center>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="ContainerImage">
+                    <img src="this.jfif" alt="book" class="image" />
+                    <div class="overlay">
+                        <div class="text">Reading story book</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="./music love.webp" alt="music" class="image" />
+                    <div class="overlay">
+                        <div class="text">Listen Music</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="Movie.jfif" alt="Dance" class="image" />
+                    <div class="overlay">
+                        <div class="text">Watch Movie</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4">
+                <div class="ContainerImage">
+                    <img src="is.jfif" alt="Photography" class="image" />
+                    <div class="overlay">
+                        <div class="text">Playing badminton</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="FreelancingRole" class="container-fluid wow bounceInUp" data-wow-duration="3s">
+            <div class="row" id="FreelancingRoleRow">
+                <center><br />
+                    <h1><i class="fa fa-user-circle-o"></i> Contact Me</h1>
+                    <hr />
+                </center>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <i class="fa fa-5x fa-address-book-o"></i><br />https://silveroakuni.ac.in/<br />
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <i class="fa fa-5x fa-github"></i><br />https://github.com/Miteshborse<br />
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <i class="fa fa-5x  fa-facebook-square"></i><br />https://m.facebook.com/<br />
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <i class="fa fa-5x fa-instagram"></i><br />https://www.instagram.com/<br />
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
